@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title><meta name="csrf-token"  />
+    <link rel="stylesheet" href="./css/uoolu.min.css" />
+    <link rel="stylesheet" href="./css/layer.css" id="layui_layer_skinlayercss"  />
+    <link rel="stylesheet" href="./css/uoolu_index_v3.min.css" />
+
+    <!--<link rel="stylesheet" href="http://www.zhongzhu71.com/Webcss/news_common.css" />-->
+    <link rel="stylesheet" href="./css/zhiYe17.css" />
+
+</head>
+<body>
+
+<!--矢量图库-->
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="login" viewbox="0 0 1024 1024">
+        <path d="M512 0a512 512 0 1 0 0 1024A512 512 0 0 0 512 0z m0 992a480 480 0 1 1 0-960 480 480 0 0 1 0 960z" p-id="7356"></path>
+        <path d="M505.408 529.472c96.768 0 175.488-77.184 175.488-172.032 0-94.848-78.72-172.032-175.488-172.032S329.92 262.656 329.92 357.504s78.784 171.968 175.488 171.968z m-67.264 31.552c-122.176 0-213.44 82.368-213.44 202.048v12.864c0 62.592 97.792 62.592 221.568 62.592h131.52c118.848 0 221.568 0 221.568-62.592v-12.864c0-119.616-91.264-202.048-213.44-202.048H438.144z" p-id="7357"></path>
+    </symbol>
+    <symbol id="tel_circle" viewbox="0 0 1024 1024">
+        <path d="M512 0a512 512 0 1 0 0 1024A512 512 0 0 0 512 0z m0 992a480 480 0 1 1 0-960 480 480 0 0 1 0 960z" p-id="7236"></path>
+        <path d="M234.048 279.68c-21.44 26.752-76.992 171.904 126.784 380.416 214.656 219.712 356.544 151.424 380.416 126.72L572.096 617.792c-20.032 19.968-32.256 37.696-81.792-2.688A729.088 729.088 0 0 1 387.008 512c-22.976-28.288-4.928-42.304 16.064-63.296L234.048 279.68zM297.408 216.256l-42.24 42.24L424.256 427.52l42.24-42.24a29.888 29.888 0 0 0 0-42.304l-126.848-126.72a29.888 29.888 0 0 0-42.24 0zM635.648 554.432l-42.304 42.176 169.024 169.024 42.24-42.24a29.76 29.76 0 0 0 0-42.24l-126.656-126.656a29.696 29.696 0 0 0-42.304-0.064z" p-id="7237"></path>
+    </symbol>
+    <symbol id="tel_signal" viewbox="0 0 1024 1024">
+        <path d="M339.208609 523.649318l-59.291384 0c2.822278-133.090181 105.898889-241.812371 236.645698-253.450433l0 59.623959C418.533258 341.17745 341.961302 423.297772 339.208609 523.649318L339.208609 523.649318zM225.435379 523.649318l-88.970334 0c2.914376-212.177424 170.265872-384.814296 380.093784-396.832004l0 88.970334C355.753423 227.598648 228.305753 360.570125 225.435379 523.649318L225.435379 523.649318zM473.748814 691.141006c15.122419 2.181689 30.41266-2.534729 41.696658-12.798491 30.394241-27.739784 66.526159-62.070684 91.130533-89.734744 0.118704 0.069585 0.215918 0.166799 0.335644 0.25992 23.518646-24.39255 51.584865-58.862619 74.722842-88.471984 19.84293-25.390273 11.354606-62.422701-16.880459-76.908624-7.110955-3.653203-13.916964-7.822153-20.364817-12.490475l157.298536-262.34501c55.949266 27.284413 94.782713 85.984327 84.064604 167.703513-6.116301 42.742477-103.483886 196.150402-224.574778 324.95293C531.782555 778.977517 377.258203 891.25365 341.576539 895.779733c-72.77549 7.137561-133.754307-12.374842-168.626535-72.448032l250.539126-175.476547C441.791985 669.544129 444.37481 687.017082 473.748814 691.141006L473.748814 691.141006zM599.986937 328.471057l105.898889-177.00025c14.295588-24.012903 42.839691-33.401738 77.783551-12.658298L625.664759 402.932955C590.83551 382.216121 585.619718 352.390839 599.986937 328.471057L599.986937 328.471057zM165.839049 730.757283l166.591179-121.644501c22.5199-16.522302 52.513004-14.057157 76.574003 18.730597L160.432922 809.345152l-5.617951-7.658424C138.360208 779.189342 143.341662 747.258095 165.839049 730.757283L165.839049 730.757283zM165.839049 730.757283" p-id="6754"></path>
+    </symbol>
+    <symbol id="email" viewbox="0 0 1024 1024">
+        <path d="M16.16568 848.651366c-5.341658-15.670911-15.245216-31.31624-15.331174-47.015803-1.063215-193.440687-0.898463-386.888538-0.542352-580.334341 0.088004-47.521317 16.167215-63.185065 64.186881-63.219857 298.290687-0.215918 596.582397-0.214894 894.873084-0.002047 48.1353 0.033769 64.23907 15.573697 64.336284 63.171762 0.39295 193.445804 0.535189 386.893654-0.524956 580.334341-0.085958 15.70468-9.967002 31.356149-15.296381 47.0332l-29.693276-34.769898-272.473695-333.294922 252.632811-268.778537-1.167592-2.172479a63739348.838991 63739348.838991 0 0 0-445.086008 349.282035L67.040371 210.052017l-1.597381 3.188622L319.049988 481.665111c-80.927147 97.03194-164.222225 196.413392-246.704798 296.463062-9.56075 11.597129-14.618952 26.90579-21.7647 40.494273L16.16568 848.651366z" p-id="6878"></path>
+        <path d="M16.16568 848.651366l34.41481-30.02892 339.245448-292.202015 118.834502 140.505058 126.404922-141.977596c105.430214 92.741217 202.357777 178.459484 300.015981 263.335571 12.401448 10.778484 28.633131 17.149589 43.090401 25.563212l29.693276 34.769898c-15.438621 5.817496-30.860868 16.658402-46.318932 16.709567-299.565726 1.001817-599.136569 1.003863-898.702296 0.001023-15.57779-0.050142-31.119765-10.869558-46.678112-16.675798z" p-id="6879"></path>
+    </symbol>
+</svg>
+<div class="site-head">
+    <div class="head-inner">
+        <h1 class="site-logo">
+            <a href="index.html" class="link-logo" >
+
+            </a>
+        </h1>
+        <!-- 追加active弹出pop层 -->
+
+        <!-- 导航 -->
+        <div class="site-nav">
+            <!-- 激活状态追加active -->
+            <div class="nav-item " data="首页">
+                <div class="item-placeholder">
+                    <a class="link-nav" href="http://www.uoolu.com/" title="首页">首页</a>
+                </div>
+            </div>
+            <!-- 激活状态追加active -->
+            <div class="nav-item nav-item-dropdown" data="说明">
+                <div class="item-placeholder">
+                    <a class="link-nav" href="javascript:;" title="一线城市购房">关于17置业</a>
+                    <i class="item-arrow"></i>
+                </div>
+                <div class="item-pop">
+                    <div class="pop-item">
+                        <a class="link-pop-item" href="javascript:;" title="中住71">企业介绍</a>
+                    </div>
+                    <div class="pop-item">
+                        <a class="link-pop-item" href="javascript:;" title="专业团队">团队介绍</a>
+                    </div>
+                    <div class="pop-item">
+                        <a class="link-pop-item" href="javascript:;" title="强强联盟 ">合作伙伴</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="nav-item nav-item-dropdown active data="新闻中心">
+                <div class="item-placeholder">
+                    <a class="link-nav" href="javascript:;" title="一线城市购房">新闻中心</a>
+                    <i class="item-arrow"></i>
+                </div>
+                <div class="item-pop">
+                    <div class="pop-item">
+                        <a class="link-pop-item" href="javascript:;" title="中住71">企业动态</a>
+                    </div>
+                    <div class="pop-item">
+                        <a class="link-pop-item" href="javascript:;" title="专业团队">企业资讯</a>
+                    </div>
+                    <div class="pop-item">
+                        <a class="link-pop-item" href="javascript:;" title="强强联盟 ">媒体报道</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="nav-item nav-item-dropdown" data="置业项目">
+                <div class="item-placeholder">
+                    <a class="link-nav" href="javascript:;" title="一线城市购房">置业项目</a>
+                    <i class="item-arrow"></i>
+                </div>
+                <div class="item-pop">
+                    <div class="pop-item">
+                        <a class="link-pop-item" href="javascript:;" title="中住71">广州</a>
+                    </div>
+                    <div class="pop-item">
+                        <a class="link-pop-item" href="javascript:;" title="专业团队">深圳</a>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="nav-item" data="理财">
+                <div class="item-placeholder">
+                    <a class="link-nav" href="http://www.uoolu.com/finance/" title="">投资计划<i class="nav-item-icon-suggest" style="top:-12px;"></i></a>
+                </div>
+            </div>
+            <div class="nav-item nav-item-dropdown" data="置业项目">
+                <div class="item-placeholder">
+                    <a class="link-nav" href="javascript:;" title="一线城市购房">投资指南</a>
+                    <i class="item-arrow"></i>
+                </div>
+                <div class="item-pop">
+                    <div class="pop-item">
+                        <a class="link-pop-item" href="javascript:;" title="中住71">置业百科</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 激活状态追加active -->
+            <div class="nav-item" data="论坛">
+                <div class="item-placeholder">
+                    <a class="link-nav" href="#" title="指南">17领里</a>
+                </div>
+            </div>
+            <!-- 激活状态追加active -->
+            <div class="nav-item nav-item-dropdown" data="百科">
+                <div class="item-placeholder">
+                    <a class="link-nav" href="http://www.uoolu.com/ask/" title="">人才中心<i class="nav-item-icon-hot" style="top:-12px;"></i></a>
+                    <i class="item-arrow"></i>
+                </div>
+                <div class="item-pop">
+                    <div class="pop-item">
+                        <a class="link-pop-item" href="http://www.uoolu.com/ask/" title="">社会招聘</a>
+                    </div>
+                    <div class="pop-item">
+                        <a class="link-pop-item" href="http://www.uoolu.com/baike/maifang/" title="">人才招聘</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- 快捷入口 -->
+        <div class="mod-quick">
+            <!-- 追加active显示头像 -->
+            <div class="quick-item quick-item__login ">
+                <!-- 默认状态 -->
+
+                <!--登入注册版块-->
+                <!--<div class="login-status__default"> -->
+                <!--<div class="avatar"> -->
+                <!--<svg class="svg-icon"> -->
+                <!--<use xlink:href="#login"></use> -->
+                <!--</svg> -->
+                <!--</div> -->
+                <!--<div class="login-entry"> -->
+                <!--<a class="link-login link-login-border login_btn" href="javascript:;" title="登录">登录</a> -->
+                <!--<a class="link-login register_btn" href="javascript:;" title="注册">注册</a> -->
+                <!--</div> -->
+                <!--</div> -->
+
+
+
+            </div>
+            <div class="quick-item quick-item__contact">
+                <svg class="svg-icon">
+                    <use xlink:href="#tel_circle"></use>
+                </svg>
+                <span class="contact-info" style="font-weight: bold;font-size: 18px;">400 900 1971</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="site_layout">
+        <div class="about_wrap clearfix" id="tabs" style="margin-bottom: 100px;">
+            <div class="about_left">
+                <div class="about_left_title">
+                    新闻中心
+                </div>
+                <ul id="tabList" class="about_nav_list">
+                    <li id="intro" style="font-weight:normal;"  class="active"><i class="about_icon about_icon_intro"></i><a href="NewsCompany.html" title="关于我们">企业动态</a></li>
+                    <li id="joinus" style="font-weight:normal;"><i class="about_icon about_icon_joinus"></i><a href="businessMovement.html" title="">企业资讯</a></li>
+                    <li id="contact" style="font-weight:normal;"><i class="about_icon about_icon_report"></i><a href="MediaCoverage.html" title="联系我们">媒体报道</a></li>
+
+                </ul>
+            </div>
+            <div id="tabContent" class="about_right">
+                <!-- 了解有路 -->
+                <div class="tab_cont_item" id="intro" style="display: block;">
+                    <div class="right_title clearfix">
+                        <a href="javascript:;" >首页</a>  > <a href="javascript:;" >新闻中心</a> ><a href="javascript:;" > 企业动态</a> > <a href="javascript:;" >上市就并购 上市公司扩张转型步伐加快</a>
+                        <h5 style="margin-top: 36px;text-align: center;font-size: 26px;">上市就并购 上市公司扩张转型步伐加快</h5>
+                    </div>
+                    <!--img id="u74_img" class="img " src="/images/about_uoolu.png"/-->
+                    <div class="right_cont">
+                        <!--div class="placeholder" style="margin-bottom: 30px;"></div-->
+                        <div class="ny_newsleft">
+                           <!--内容区-->
+                            <div class="count_de">
+
+                                <p>
+                                    <span style="font-family:微软雅黑;font-size:14px;">近期，在宣布停牌筹划重大资产重组或已公布重大资产重组预案的上市公司中，不乏上市不久的次新股身影。近年来，伴随经济结构调整，上市公司利用资本平台，通过并购的方式进行行业整合、产业链协同、转型升级步伐不断加快，乃至很多上市公司“一上市就并购”，不断上演扩张与转型的“生死时速”。业内人士指出，“一上市就并购”的案例不断涌现，从侧面反映了上市公司利用资本平台在行业整合、产业链协同、转型升级方面的步伐正不断加快。</span></p><table border="0" cellspacing="0" cellpadding="0" align="left"><tbody><tr><td><br></td></tr></tbody></table><p><br></p><p><span style="font-family:微软雅黑;font-size:14px;">　　一上市就并购</span></p><p><span style="font-family:微软雅黑;font-size:14px;">　　近日，和科达发布重大资产重组预案，拟作价6.18亿元收购宝盛自动化100%股权，同时募资1.72亿元用于支付本次交易的现金对价。</span></p><p><span style="font-family:微软雅黑;font-size:14px;">　　和科达去年10月底IPO，今年2月便宣布停牌重组。实际上，除了和科达，今年公布重大资产重组预案的上市公司中，就包括盛讯达、广信材料、帝王洁具、兆易创新等上市不久的次新股。</span></p><p><span style="font-family:微软雅黑;font-size:14px;">　　更有上市公司在IPO后不到一年内就已筹划多次并购。以去年5月IPO的金冠电气为例，去年11月29日，公司公告拟以发行股份及支付现金的方式，作价15.04亿元收购能瑞自动化100%股权。今年5月16日，金冠电气发布重大资产重组进展公告，拟收购中锂新材和鸿图隔膜全部或部分股权。</span></p><p><span style="font-family:微软雅黑;font-size:14px;">　　还有很多次新股虽然还没完成并购或公布预案，但也已“在路上”。今年4月，IPO才2个月的宣亚国际宣布筹划重大资产重组事项。5月9日，宣亚国际披露重大资产重组进展公告，称本次重大资产重组标的资产为北京蜜莱坞网络科技有限公司预计不低于50%的股权，而北京蜜莱坞网络科技有限公司是直播平台“映客”的经营实体。</span></p><p><span style="font-family:微软雅黑;font-size:14px;">　　去年年底IPO的中通国脉在今年3月13日宣布停牌，原因是公司正在筹划重大事项，该事项可能涉及重大资产重组。5月8日，公司称本次交易的标的为吉林通建及上海共创100%股权。此后，公司决定终止收购吉林通建100%股权。目前，公司仍在推进收购上海共创100%股权并募集配套资金的各项工作。</span></p><p><span style="font-family:微软雅黑;font-size:14px;">　　次新股“一上市就并购”的热潮始于2014年。业内人士指出，一方面，近年来登陆A股的上市公司很多处于传统行业，随着经济结构调整，部分次新股存在通过并购重组加快转型或拓展主业的需求；另一方面，政策环境变化也在客观上加快了次新股并购重组的步伐。</span></p><p><span style="font-family:微软雅黑;font-size:14px;">　　长江证券认为，由于并购重组的配套融资不受18个月限制的影响，未来部分次新股再融资需求或转为并购需求。就可行性而言，通过对2014年以来上市公司的项目融资投向进行梳理可以发现，募集的资金基本全部用于与主营相关的项目建设，以推动主营业务扩张与升级，而这通过并购方式也可以实现。</span></p><p><span style="font-family:微软雅黑;font-size:14px;">　　加快扩张与转型</span></p><p><span style="font-family:微软雅黑;font-size:14px;">　　业内人士指出，“一上市就并购”的案例不断涌现，从侧面反映了上市公司利用资本平台在行业整合、产业链协同、转型升级方面的步伐正不断加快。</span></p><p><span style="font-family:微软雅黑;font-size:14px;">　　一是通过收购同行业企业进行产业整合。以兆易创新拟65亿元收购北京矽成100%股权为例，公告称，上市公司与标的公司均主要从事集成电路存储芯片及其衍生产品的研发、技术支持和销售，本次交易属于对同行业优质企业的整合收购，交易完成后可以形成良好的规模效应。同时，通过存储芯片产品品类的扩充，以及产品适用领域逐渐迈入专用级应用市场，上市公司产品的市场占有率将迎来进一步增长。</span></p><p><span style="font-family:微软雅黑;font-size:14px;">　　二是通过收购产业链上下游企业实现产业协同。以帝王洁具为例，公司称，作为从事家居、建材制造的企业，未来通过渠道布局或者各个品牌间通过股权关系进行强强联合将是必然选择。在此背景下，公司宣布拟19.68亿元收购欧神诺98.39%股权。</span></p><p><span style="font-family:微软雅黑;font-size:14px;">　　三是通过收购布局新兴产业实现转型发展。以宣亚国际收购映客直播为例，资料显示，宣亚国际主营业务为整合营销传播服务，具体包括常年顾问服务、项目服务两类。而映客直播则是国内新兴的直播行业的龙头公司，数据显示，截至2016年末，网络直播平台数量约200家，市场交易规模约为350亿元，用户数量达到2亿人。通过收购映客直播进军新兴的直播产业，无疑有利于宣亚国际的转型发展。记者 任明杰 实习记者 董添</span></p><div><span style="font-family:微软雅黑;font-size:14px;"><br></span></div><p>
+                            </p>
+                            </div>
+                        </div>
+                        <!--<div class="desc" style="font-size: 20px; font-weight: bold;">-->
+                            <!--<p>上有路，做全球房东！</p>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+                <!-- 加入有路 -->
+
+            </div>
+        </div>
+        <!-- 快捷浮层 开始 -->
+
+    </div>
+    <!-- 底部 开始 -->
+    <!-- 底部 开始 -->
+
+</div>
+
+<div class="site_footer hide_mobile">
+    <div class="footer_copyright">
+        <div class="site_layout clearfix">
+            <div class="footer_part_one">
+                <div class="mt5">
+                    <img width="" height="72" src="./images/index_footer_logo.png" alt="" />
+                </div>
+                <div class="footer_normal">
+                    <div class="mb15">
+                        <svg class="svg-icon svg-icon-tel-signal">
+                            <use xlink:href="#tel_signal"></use>
+                        </svg>
+                        <span class="footer_phone_desc">
+         <div class="phone_num">
+          400-666-2316
+         </div>
+         <div class="phone_time">
+          全国统一服务热线 （工作日 9:00 - 18:00）
+         </div> </span>
+                    </div>
+                    <div>
+                        <svg class="svg-icon svg-icon-email">
+                            <use xlink:href="#email"></use>
+                        </svg>
+                        <span class="footer_email_desc">cs@zhongzhu71.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_info clearfix">
+                <div class="info_item">
+                    <div class="item_title">
+                        关于我们
+                    </div>
+                    <div class="item_link">
+                        <div class="link_item">
+                            <a target="_blank" href="http://www.uoolu.com/about/" title="了解有路">了解我们</a>
+                        </div>
+                        <div class="link_item">
+                            <a target="_blank" href="http://www.uoolu.com/about/joinus/" title="加入我们">加入我们</a>
+                        </div>
+                        <div class="link_item">
+                            <a target="_blank" href="http://www.uoolu.com/service/" title="服务条款">服务协议</a>
+                        </div>
+                        <div class="link_item">
+                            <a target="_blank" href="http://www.uoolu.com/about/contact/" title="联系我们">联系我们</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="info_item">
+                    <div class="item_title">
+                        71产品
+                    </div>
+                    <div class="item_link">
+                        <div class="link_item">
+                            <a target="_blank" href="http://www.zhongzhu71.com/" title="企业培训,资质服务,中住71网,建筑人才招聘">中住71</a>
+                        </div>
+                        <div class="link_item">
+                            <a target="_blank" href="#" title="">17置业</a>
+                        </div>
+                        <div class="link_item">
+                            <!--<a target="_blank" href="http://plus.uoolu.com/" title="UOOLU+">Uoolu+</a>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="info_item">
+                    <div class="item_title">
+                        合作加盟
+                    </div>
+                    <div class="item_link">
+                        <div class="link_item">
+                            <a target="_blank" href="http://www.uoolu.com/jiameng.html" title="城市代理">城市代理</a>
+                        </div>
+                        <div class="link_item">
+                            <a target="_blank" href="http://www.uoolu.com/investment-cn.html" title="开发商合作">开发商合作</a>
+                        </div>
+                        <!--<div class="link_item">-->
+                        <!--<a target="_blank" href="http://www.uoolu.com/investment-en.html" title="Developers Cooperation">Developers Cooperation</a>-->
+                        <!--</div> -->
+                        <!--<div class="link_item">-->
+                        <!--<a target="_blank" href="https://plus.uoolu.com/trustee/" title=" Agent application"> Brokers&amp;Agents Cooperation</a>-->
+                        <!--</div> -->
+                        <!--div class="link_item"><a target="_blank" href="javascript:void(0);" title="隐私协议">隐私协议</a></div>
+                                        <div class="link_item"><a target="_blank" href="javascript:void(0);" title="帮助中心">帮助中心</a></div>
+                                        <div class="link_item"><a target="_blank" href="javascript:void(0);" title="网站地图">网站地图</a></div-->
+                    </div>
+                </div>
+            </div>
+            <div class="footer_service clearfix">
+                <div class="service_item">
+                    <div class="mb15 mb15s">
+                        <img width="102" height="102" src="http://www.zhongzhu71.com/images/wx_erweima.png" alt=""  />
+                    </div>
+                    <div class="service_name">
+                        中住71官方微信
+                    </div>
+                </div>
+                <div class="service_item" style="width: 122px;">
+                    <div class="mb15 mb15s">
+                        <img width="102" height="102" src="http://www.zhongzhu71.com/images/wb_erweima.png" alt="" />
+                    </div>
+                    <div class="service_name">
+                        中住建筑咨询
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 友情链接 -->
+        <div class="footer_friend_link">
+            <div class="link_title">
+                友情链接：
+            </div>
+            <div class="link_list">
+                <div class="list_show">
+                    <a class="link_item" href="http://bank.ecitic.com/zxcgjr/main.html" target="_blank">中住71</a>
+                    <a class="link_item" href="http://www.17.com/" target="_blank">中住招商</a>
+                    <a class="link_item" href="http://z.mafengwo.cn/" target="_blank">中住资产</a>
+                    <a class="link_item" href="http://bbs.yinar.com/" target="_blank">移哪儿网</a>
+                    <a class="link_item" href="http://nj.tobosu.com/" target="_blank">广州装修</a>
+                    <a class="link_item" href="http://www.xafc.com/" target="_blank">广东房产网</a>
+                    <a class="link_item" href="http://wh.lianjia.com/" target="_blank">深圳房产网</a>
+                    <a class="link_item" href="http://baixing.sz.js.cn/" target="_blank">广东分类信息网</a>
+                    <a class="link_item" href="http://jiaju.haogongzhang.com/" target="_blank">家居网</a>
+                    <span class="list_hide" id="friend_link_hide"> <a class="link_item" href="http://www.payfang.com/" target="_blank">买房网</a> <a class="link_item" href="http://www.ehouse411.com/" target="_blank">加拿大地产</a> </span>
+                    <a title="展开" href="javascript:;" class="link_more" id="friend_link_more">展开&gt;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site_footer_copyright hide_mobile">
+    <div class="site_layout pr">
+        <div class="copyright_left">
+            <p class="mb5">Copyright &copy; 2017  Inc. All Rights Reserved. </p>
+            <p>广州市天河区天源路180号博纳大厦10楼</p>
+        </div>
+        <div class="copyright_right">
+            <a rel="nofollow" target="_blank" title="110网警" href="http://www.bj.cyberpolice.cn/index.do" class="site"> <img src="./images/20150618185405196319.jpg" alt="" /> </a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
